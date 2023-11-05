@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function PostBox() {
+function PostBox(onClick) {
     return(
         <div className='postBox'>
             <div>
@@ -10,4 +10,5 @@ function PostBox() {
         </div>
     );
 }
+
 export default PostBox
