@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const CreatePost = () => {
     return(
-        <div className="CreatePost">
-
-        </div>
-    );
+        <div>CreatePost</div>
+    )
 }
+
+export default CreatePost;
