@@ -364,7 +364,7 @@
 }
 
 .login {
-  background-image: linear-gradient(to top right, #8E8FFA, #E6F0FF);
+  background-image: linear-gradient(to top right, #C2D9FF, #E6F0FF);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -399,10 +399,7 @@
   cursor: pointer;
 }
 .login .container .info-container .btn {
-  width: 25%;
-}
-.login .container .info-container .btn h3 {
-  color: #E6F0FF;
+  width: 150px;
 }
 .login .container .login-form {
   background-color: #E6F0FF;
@@ -450,6 +447,96 @@
   border-radius: 30px;
 }
 .login .container .login-form .form-group h6 {
+  text-align: center;
+  margin: 2px;
+}
+
+.register {
+  background-image: linear-gradient(to top right, #C2D9FF, #E6F0FF);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register .container {
+  background-color: #8E8FFA;
+  width: 60%;
+  height: 70%;
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.register .container .info-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: #E6F0FF;
+  margin: 50px;
+}
+.register .container .info-container .btn {
+  background-color: #7752FE;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #E6F0FF;
+  cursor: pointer;
+}
+.register .container .info-container .btn {
+  width: 150px;
+}
+.register .container .register-form {
+  background-color: #E6F0FF;
+  width: 70%;
+  height: 100%;
+  padding: 20px 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+.register .container .register-form .form-title {
+  text-align: center;
+  font-size: large;
+  font-weight: 700;
+}
+.register .container .register-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.register .container .register-form .form-group label {
+  font-size: small;
+  margin: 10px 0;
+  color: #333;
+}
+.register .container .register-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+.register .container .register-form .form-group .btn {
+  background-color: #7752FE;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #E6F0FF;
+  cursor: pointer;
+}
+.register .container .register-form .form-group .btn {
+  align-self: center;
+  width: 50%;
+  border-radius: 30px;
+}
+.register .container .register-form .form-group h6 {
   text-align: center;
   margin: 2px;
 }/*# sourceMappingURL=index.css.map */

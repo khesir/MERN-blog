@@ -8,9 +8,9 @@ const Login = () => {
           <div className="info-container">
             <h1>Welcome!</h1>
             <p>Login in to your account to continue.</p>
-            <div className="btn">
+            <div className="btn-container">
               <Link to='/' className='link'>
-                <h3>Visit site</h3>
+                <h3 className="btn">Visit site</h3>
               </Link>
             </div>
           </div>
