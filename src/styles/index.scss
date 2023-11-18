@@ -9,16 +9,31 @@ $Color-5: #E6F0FF;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+@mixin btn-style(){
+    .btn{
+        background-color: #7752FE;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        color: $Color-5;
+        cursor: pointer;
+    }
+}
 @mixin nav-interactivity{
     .container{
-        padding: 10px 30px;
-        margin: 30px;
+        padding: 20px 0px;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        transition: 0.3s;
         .nav-brand{
             font-size: 1.3rem;
-            color: white;
+            
+            label{
+                cursor: pointer;
+                color: white;
+            }
+            
         }
         .links{
             display: flex;
@@ -59,12 +74,49 @@ $Color-5: #E6F0FF;
                         }
                         &:after{
                             width: 100%;
-                        }
-                        
+                        }   
+                    }   
+                }
+            }
+            .exclude-hover{
+                h6{
+                    &:hover {
+                        &:before,
+                        &:after{
+                            width: 0%;
+                        }   
                     }
                 }
-                
-                
+            }
+        }
+        .nav-user{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            .img-container {
+                height: 50px;
+                width: 50px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .user-actionbtn{
+                h6{
+                    background-color: #7752FE;
+                    padding: 5px 15px;
+                    border: none;
+                    border-radius: 5px;
+                    color: $Color-5;
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-weight: 100;
+                    font-weight: 300;
+                    text-decoration: none;
+                    color: $Color-5;
+                }
             }
             
         }
@@ -79,17 +131,8 @@ $Color-5: #E6F0FF;
     }
 }
 
-@mixin btn-style(){
-    .btn{
-        background-color: #7752FE;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        color: $Color-5;
-        cursor: pointer;
-    }
-}
 
+// Layout
 .App {
     display: flex;
     justify-content: center;
@@ -103,164 +146,243 @@ $Color-5: #E6F0FF;
         }
         .navbar{
             width: 100%;
-            position:fixed;
+            position: fixed;
             background-color: transparent;
             z-index: 100;
+            transition: 0.3s;
             @include nav-interactivity();
         }
-        .home {
-            .hero{
-                height: 100vh;
-                background-image: url(../assets/banner.png);
-                background-size: cover;
+        .scrolled{
+            background-color: $Color-4;
+            z-index: 100;
+            transition: 0.3s;
+            @include nav-interactivity();
+            .container{
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+        
+        footer {
+            background-color: $Color-4;
+            height: 50vh;
+        }
+    }
+}
+// Mainpage page
+.home {
+    .hero{
+        height: 100vh;
+        background-image: url(../assets/banner.png);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 1024px;
+            height: 100%;
+            .hero-article{
+                margin-top: 16vh;
                 display: flex;
-                justify-content: center;
-                .container{
+                flex-direction: column;
+                align-items: center;
+                .massive-articles{
                     display: flex;
-                    flex-direction: column;
-                    width: 1024px;
-                    height: 100%;
-                    .hero-article{
-                        
-                        margin-top: 16vh;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        .massive-articles{
-                            display: flex;
-                            justify-content: space-evenly;
-                            align-items: center;
-                            .massive-box{
-                                height: 50vh;
-                                margin:1vh;
-                                width: 60vh;
-                                background-color: $Color-1;
-                                cursor: pointer;
-                                @include img-cover;
-                            }
-                            .small-posts{
-                                position: relative;
-                                color: $Color-5;
-                                cursor: auto;
-                                .mb-title{
-                                    padding: 10px;
-                                }
-                                .latest-articles{
-                                    .latest-article{
-                                        background-color: $Color-5;
-                                        color: #333;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        padding: 10px;
-                                        margin: 10px;
-                                        border: #333 solid 1px;
-                                        cursor: pointer;
-                                    }
-                                }
-                            }
+                    justify-content: space-evenly;
+                    align-items: center;
+                    .massive-box{
+                        height: 50vh;
+                        margin:1vh;
+                        width: 60vh;
+                        background-color: $Color-1;
+                        cursor: pointer;
+                        @include img-cover;
+                    }
+                    .small-posts{
+                        position: relative;
+                        color: $Color-5;
+                        cursor: auto;
+                        .mb-title{
+                            padding: 10px;
                         }
-                        .small-articles {
-                            
-                            display: flex;
-                            justify-content: space-evenly;
-                            align-items: center;
-                            .small-article{
-                                width: 29vh;
-                                height: 30vh;
-                                margin: 1vh;
-                                background-color: $Color-1;
-                                background-size: cover;
+                        .latest-articles{
+                            .latest-article{
+                                background-color: $Color-5;
+                                color: #333;
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 10px;
+                                margin: 10px;
+                                border: #333 solid 1px;
                                 cursor: pointer;
-                                @include img-cover;
                             }
                         }
                     }
                 }
-            }
-            .container{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                .posts{
-                    border-radius: 10px;
-                    width: 70%;
-                    padding: 50px;
-                    margin: 50px;
-                    background-color: $Color-1;
+                .small-articles {
+                    
                     display: flex;
+                    justify-content: space-evenly;
                     align-items: center;
-                    flex-direction: column;
-                    .post-title{
-                        color:$Color-5;
-                        margin:10px 0px 10px 0px;
-                        padding: 0 20px;
-                        border-bottom: 2px solid $Color-5;
-                    }
-                    .article-list {
+                    .small-article{
+                        width: 29vh;
+                        height: 30vh;
+                        margin: 1vh;
+                        background-color: $Color-1;
+                        background-size: cover;
                         cursor: pointer;
+                        @include img-cover;
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .posts{
+            border-radius: 10px;
+            width: 70%;
+            padding: 50px;
+            margin: 50px;
+            background-color: $Color-1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .post-title{
+                color:$Color-5;
+                margin:10px 0px 10px 0px;
+                padding: 0 20px;
+                border-bottom: 2px solid $Color-5;
+            }
+            .article-list {
+                cursor: pointer;
+                width: 100%;
+                transition: 0.3;
+                .postbox{
+                    width: 100%;
+                    margin: 10px;
+                    border: #333 solid 1px;
+                    .article {
                         width: 100%;
-                        transition: 0.3;
-                        .postbox{
-                            width: 100%;
-                            margin: 10px;
-                            border: #333 solid 1px;
-                            .article {
-                                width: 100%;
-                                height: 15%;
-                                display:flex;
-                                background-color: $Color-5;
-                                .article-image {
-                                    height: 200px;
-                                    flex: 30%;
-                                    order: 1;
-                                    @include img-cover;
+                        height: 15%;
+                        display:flex;
+                        background-color: $Color-5;
+                        .article-image {
+                            height: 200px;
+                            flex: 30%;
+                            order: 1;
+                            @include img-cover;
+                        }
+                        .article-content{
+                            position: relative;
+                            flex:70%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            .article-title{
+                                padding: 0 20px;                    
+                            }
+                            .article-footer{
+                                
+                                display: flex;
+                                .article-author{
+                                    padding: 0 20px;
                                 }
-                                .article-content{
-                                    position: relative;
-                                    flex:70%;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-around;
-                                    .article-title{
-                                        padding: 0 20px;                    
-                                    }
-                                    .article-footer{
-                                        
-                                        display: flex;
-                                        .article-author{
-                                            padding: 0 20px;
-                                        }
-                                        .article-date{
-                                            padding: 0 20px;
-                                        }
-                                        
-                                    }
+                                .article-date{
+                                    padding: 0 20px;
                                 }
                                 
                             }
                         }
                         
                     }
-                    @include btn-style;
+                }
+                
+            }
+            @include btn-style;
+        }
+    }
+}
+// Login
+.login{
+    background-image: linear-gradient(to top right,$Color-1 , $Color-5 );
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        background-color: $Color-1;
+        width: 60%;
+        height: 70%;
+        border-radius: 20px;
+        padding: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .info-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            color: $Color-5;
+
+            @include btn-style();
+            .btn{
+                
+                width:25%;
+                h3 {
+                    color: $Color-5;    
                 }
             }
         }
-        footer {
-            background-color: $Color-4;
-            height: 50vh;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
+        .login-form {
+            background-color: $Color-5;
+            width: 70%;
+            height: 100%;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            .form-title{
+                text-align: center;
+                font-size: large;
+                font-weight: 700;
+                
+            }
+            .form-group{
+                display: flex;
+                flex-direction: column;
+                margin: 10px;    
+                label{
+                    font-size: small;
+                    margin: 10px 0;
+                    color: #333;
+                }
+                input{
+                    width: 100%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 20px;
+                    outline: none;
+                }
+                @include btn-style;
+                .btn{
+                    align-self: center;
+                    width: 50%;
+                    border-radius: 30px;
+                }
+                h6{
+                    text-align: center;
+                    margin: 2px;
+                }
+            }
+        }        
     }
 }

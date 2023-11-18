@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
-import CreatePost from './pages/Createpost';
+import CreatePost from './pages/CreatePost';
 import ViewPost from './pages/Viewpost';
 import Profile from './pages/Profile';
 import LoginPage from './pages/Login';

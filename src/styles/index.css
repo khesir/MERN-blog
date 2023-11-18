@@ -23,16 +23,20 @@
   position: fixed;
   background-color: transparent;
   z-index: 100;
+  transition: 0.3s;
 }
 .App .container .navbar .container {
-  padding: 10px 30px;
-  margin: 30px;
+  padding: 20px 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  transition: 0.3s;
 }
 .App .container .navbar .container .nav-brand {
   font-size: 1.3rem;
+}
+.App .container .navbar .container .nav-brand label {
+  cursor: pointer;
   color: white;
 }
 .App .container .navbar .container .links {
@@ -76,52 +80,185 @@
 .App .container .navbar .container .links .link h6:hover:after {
   width: 100%;
 }
-.App .container .home .hero {
+.App .container .navbar .container .links .exclude-hover h6:hover:before, .App .container .navbar .container .links .exclude-hover h6:hover:after {
+  width: 0%;
+}
+.App .container .navbar .container .nav-user {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.App .container .navbar .container .nav-user .img-container {
+  height: 50px;
+  width: 50px;
+}
+.App .container .navbar .container .nav-user .img-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.App .container .navbar .container .nav-user .user-actionbtn h6 {
+  background-color: #7752FE;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #E6F0FF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 100;
+  font-weight: 300;
+  text-decoration: none;
+  color: #E6F0FF;
+}
+.App .container .scrolled {
+  background-color: #130652;
+  z-index: 100;
+  transition: 0.3s;
+}
+.App .container .scrolled .container {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.3s;
+}
+.App .container .scrolled .container .nav-brand {
+  font-size: 1.3rem;
+}
+.App .container .scrolled .container .nav-brand label {
+  cursor: pointer;
+  color: white;
+}
+.App .container .scrolled .container .links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.App .container .scrolled .container .links .link {
+  margin: 0 20px;
+}
+.App .container .scrolled .container .links .link h6 {
+  position: relative;
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  font-weight: 300;
+}
+.App .container .scrolled .container .links .link h6::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+.App .container .scrolled .container .links .link h6::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+.App .container .scrolled .container .links .link h6:hover:before {
+  width: 100%;
+}
+.App .container .scrolled .container .links .link h6:hover:after {
+  width: 100%;
+}
+.App .container .scrolled .container .links .exclude-hover h6:hover:before, .App .container .scrolled .container .links .exclude-hover h6:hover:after {
+  width: 0%;
+}
+.App .container .scrolled .container .nav-user {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.App .container .scrolled .container .nav-user .img-container {
+  height: 50px;
+  width: 50px;
+}
+.App .container .scrolled .container .nav-user .img-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.App .container .scrolled .container .nav-user .user-actionbtn h6 {
+  background-color: #7752FE;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #E6F0FF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 100;
+  font-weight: 300;
+  text-decoration: none;
+  color: #E6F0FF;
+}
+.App .container .scrolled .container {
+  padding: 0px;
+  margin: 0px;
+}
+.App .container footer {
+  background-color: #130652;
+  height: 50vh;
+}
+
+.home .hero {
   height: 100vh;
   background-image: url(../assets/banner.png);
   background-size: cover;
   display: flex;
   justify-content: center;
 }
-.App .container .home .hero .container {
+.home .hero .container {
   display: flex;
   flex-direction: column;
   width: 1024px;
   height: 100%;
 }
-.App .container .home .hero .container .hero-article {
+.home .hero .container .hero-article {
   margin-top: 16vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.App .container .home .hero .container .hero-article .massive-articles {
+.home .hero .container .hero-article .massive-articles {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.App .container .home .hero .container .hero-article .massive-articles .massive-box {
+.home .hero .container .hero-article .massive-articles .massive-box {
   height: 50vh;
   margin: 1vh;
   width: 60vh;
   background-color: #8E8FFA;
   cursor: pointer;
 }
-.App .container .home .hero .container .hero-article .massive-articles .massive-box img {
+.home .hero .container .hero-article .massive-articles .massive-box img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.App .container .home .hero .container .hero-article .massive-articles .small-posts {
+.home .hero .container .hero-article .massive-articles .small-posts {
   position: relative;
   color: #E6F0FF;
   cursor: auto;
 }
-.App .container .home .hero .container .hero-article .massive-articles .small-posts .mb-title {
+.home .hero .container .hero-article .massive-articles .small-posts .mb-title {
   padding: 10px;
 }
-.App .container .home .hero .container .hero-article .massive-articles .small-posts .latest-articles .latest-article {
+.home .hero .container .hero-article .massive-articles .small-posts .latest-articles .latest-article {
   background-color: #E6F0FF;
   color: #333;
   display: flex;
@@ -131,12 +268,12 @@
   border: #333 solid 1px;
   cursor: pointer;
 }
-.App .container .home .hero .container .hero-article .small-articles {
+.home .hero .container .hero-article .small-articles {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.App .container .home .hero .container .hero-article .small-articles .small-article {
+.home .hero .container .hero-article .small-articles .small-article {
   width: 29vh;
   height: 30vh;
   margin: 1vh;
@@ -144,18 +281,18 @@
   background-size: cover;
   cursor: pointer;
 }
-.App .container .home .hero .container .hero-article .small-articles .small-article img {
+.home .hero .container .hero-article .small-articles .small-article img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.App .container .home .container {
+.home .container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.App .container .home .container .posts {
+.home .container .posts {
   border-radius: 10px;
   width: 70%;
   padding: 50px;
@@ -165,59 +302,59 @@
   align-items: center;
   flex-direction: column;
 }
-.App .container .home .container .posts .post-title {
+.home .container .posts .post-title {
   color: #E6F0FF;
   margin: 10px 0px 10px 0px;
   padding: 0 20px;
   border-bottom: 2px solid #E6F0FF;
 }
-.App .container .home .container .posts .article-list {
+.home .container .posts .article-list {
   cursor: pointer;
   width: 100%;
   transition: 0.3;
 }
-.App .container .home .container .posts .article-list .postbox {
+.home .container .posts .article-list .postbox {
   width: 100%;
   margin: 10px;
   border: #333 solid 1px;
 }
-.App .container .home .container .posts .article-list .postbox .article {
+.home .container .posts .article-list .postbox .article {
   width: 100%;
   height: 15%;
   display: flex;
   background-color: #E6F0FF;
 }
-.App .container .home .container .posts .article-list .postbox .article .article-image {
+.home .container .posts .article-list .postbox .article .article-image {
   height: 200px;
   flex: 30%;
   order: 1;
 }
-.App .container .home .container .posts .article-list .postbox .article .article-image img {
+.home .container .posts .article-list .postbox .article .article-image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.App .container .home .container .posts .article-list .postbox .article .article-content {
+.home .container .posts .article-list .postbox .article .article-content {
   position: relative;
   flex: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.App .container .home .container .posts .article-list .postbox .article .article-content .article-title {
+.home .container .posts .article-list .postbox .article .article-content .article-title {
   padding: 0 20px;
 }
-.App .container .home .container .posts .article-list .postbox .article .article-content .article-footer {
+.home .container .posts .article-list .postbox .article .article-content .article-footer {
   display: flex;
 }
-.App .container .home .container .posts .article-list .postbox .article .article-content .article-footer .article-author {
+.home .container .posts .article-list .postbox .article .article-content .article-footer .article-author {
   padding: 0 20px;
 }
-.App .container .home .container .posts .article-list .postbox .article .article-content .article-footer .article-date {
+.home .container .posts .article-list .postbox .article .article-content .article-footer .article-date {
   padding: 0 20px;
 }
-.App .container .home .container .posts .btn {
+.home .container .posts .btn {
   background-color: #7752FE;
   padding: 10px 15px;
   border: none;
@@ -225,7 +362,94 @@
   color: #E6F0FF;
   cursor: pointer;
 }
-.App .container footer {
-  background-color: #130652;
-  height: 50vh;
+
+.login {
+  background-image: linear-gradient(to top right, #8E8FFA, #E6F0FF);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .container {
+  background-color: #8E8FFA;
+  width: 60%;
+  height: 70%;
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.login .container .info-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: #E6F0FF;
+}
+.login .container .info-container .btn {
+  background-color: #7752FE;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #E6F0FF;
+  cursor: pointer;
+}
+.login .container .info-container .btn {
+  width: 25%;
+}
+.login .container .info-container .btn h3 {
+  color: #E6F0FF;
+}
+.login .container .login-form {
+  background-color: #E6F0FF;
+  width: 70%;
+  height: 100%;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.login .container .login-form .form-title {
+  text-align: center;
+  font-size: large;
+  font-weight: 700;
+}
+.login .container .login-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.login .container .login-form .form-group label {
+  font-size: small;
+  margin: 10px 0;
+  color: #333;
+}
+.login .container .login-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+.login .container .login-form .form-group .btn {
+  background-color: #7752FE;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #E6F0FF;
+  cursor: pointer;
+}
+.login .container .login-form .form-group .btn {
+  align-self: center;
+  width: 50%;
+  border-radius: 30px;
+}
+.login .container .login-form .form-group h6 {
+  text-align: center;
+  margin: 2px;
 }/*# sourceMappingURL=index.css.map */
