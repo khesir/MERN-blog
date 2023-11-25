@@ -688,4 +688,63 @@
 .profile .container .box2 .creator-post .article-list {
   height: 100%;
   overflow-y: auto;
+}
+
+.createPost {
+  background-color: #8E8FFA;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.createPost .container {
+  width: 100%;
+  height: 80%;
+  margin: 130px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: #C2D9FF;
+}
+.createPost .container .action-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.createPost .container .action-btns .btn {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: #7752FE;
+  color: #E6F0FF;
+  cursor: pointer;
+}
+.createPost .container .write-post-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
+  gap: 10px;
+  padding: 10px;
+}
+.createPost .container .write-post-container textarea {
+  flex: 40%;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+  height: 100%;
+}
+.createPost .container .write-post-container .res-content {
+  flex: 40%;
+  width: 100%;
+  padding: 10px;
+  background-color: #E6F0FF;
+  height: 100%;
 }/*# sourceMappingURL=index.css.map */
