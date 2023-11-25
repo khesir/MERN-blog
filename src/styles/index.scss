@@ -622,8 +622,11 @@ $Color-5: #E6F0FF;
                 flex: 40%;
                 width: 100%;
                 padding: 10px;
-                background-color: $Color-5;
+                background-color: white;
                 height: 100%;
+                .markdown{
+                    color:#333;
+                }
             }
         }
     }
