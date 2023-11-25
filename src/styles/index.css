@@ -314,18 +314,16 @@
   transition: 0.3;
 }
 .home .container .posts .article-list .postbox {
-  width: 100%;
   margin: 10px;
-  border: #333 solid 1px;
 }
 .home .container .posts .article-list .postbox .article {
   width: 100%;
-  height: 15%;
+  height: 200px;
   display: flex;
   background-color: #E6F0FF;
 }
 .home .container .posts .article-list .postbox .article .article-image {
-  height: 200px;
+  height: 100%;
   flex: 30%;
   order: 1;
 }
@@ -539,4 +537,155 @@
 .register .container .register-form .form-group h6 {
   text-align: center;
   margin: 2px;
+}
+
+.profile {
+  background-color: #8E8FFA;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.profile .container {
+  width: 100%;
+  height: 80%;
+  margin: 130px 30px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.profile .container .box1 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile .container .box1 .profile-box {
+  padding: 10px 10px;
+  width: 100%;
+  flex: 20%;
+  display: flex;
+  background-color: #C2D9FF;
+  justify-content: space-around;
+  align-items: center;
+}
+.profile .container .box1 .profile-box .profile-img {
+  height: 200px;
+  width: 200px;
+}
+.profile .container .box1 .profile-box .profile-img img {
+  border-radius: 10%;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile .container .box1 .profile-box .profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.profile .container .box1 .profile-box .profile-info .profile-stats {
+  display: flex;
+  width: 100%;
+  padding-top: 30px;
+  justify-content: space-evenly;
+}
+.profile .container .box1 .profile-box .profile-info .profile-stats .profile-stat {
+  font-size: 1rem;
+  padding: 0px 10px;
+  font-weight: 300;
+}
+.profile .container .box1 .profile-box .profile-info button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: #7752FE;
+  color: #E6F0FF;
+  cursor: pointer;
+}
+.profile .container .box1 .aboutme-box {
+  padding: 30px 10px;
+  flex: 50%;
+  background-color: #C2D9FF;
+}
+.profile .container .box1 .aboutme-box p {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+}
+.profile .container .box2 {
+  width: 60%;
+  height: 100%;
+  background-color: #C2D9FF;
+}
+.profile .container .box2 .search {
+  display: flex;
+  justify-content: end;
+  padding: 10px 10px;
+}
+.profile .container .box2 .search input {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+.profile .container .box2 .creator-post {
+  height: 95%;
+  width: 100%;
+  padding: 30px 0px;
+}
+.profile .container .box2 .creator-post .article-list {
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3;
+}
+.profile .container .box2 .creator-post .article-list .postbox {
+  margin: 10px;
+}
+.profile .container .box2 .creator-post .article-list .postbox .article {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  background-color: #E6F0FF;
+}
+.profile .container .box2 .creator-post .article-list .postbox .article .article-image {
+  height: 100%;
+  flex: 30%;
+  order: 1;
+}
+.profile .container .box2 .creator-post .article-list .postbox .article .article-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile .container .box2 .creator-post .article-list .postbox .article .article-content {
+  position: relative;
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.profile .container .box2 .creator-post .article-list .postbox .article .article-content .article-title {
+  padding: 0 20px;
+}
+.profile .container .box2 .creator-post .article-list .postbox .article .article-content .article-footer {
+  display: flex;
+}
+.profile .container .box2 .creator-post .article-list .postbox .article .article-content .article-footer .article-author {
+  padding: 0 20px;
+}
+.profile .container .box2 .creator-post .article-list .postbox .article .article-content .article-footer .article-date {
+  padding: 0 20px;
+}
+.profile .container .box2 .creator-post .article-list {
+  height: 100%;
+  overflow-y: auto;
 }/*# sourceMappingURL=index.css.map */

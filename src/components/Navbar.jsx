@@ -56,7 +56,6 @@ const Navbar = () => {
                         </Link>
                     </div>
                 </div>
-                
             </div>
         </div>
     )
